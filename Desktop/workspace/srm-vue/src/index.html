@@ -18,7 +18,6 @@
         </div>
         <div class="navbar-menu">
           <div class="navbar-start">
-            
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
@@ -44,10 +43,10 @@
               </p>
               <ul class="menu-list">
                 <li :class="staffShowC">
-                  <a class="link" href="#" @click="staffClick()">
+                  <a class="link" href="#" @click="menuClick('staff')">
                       <span>Staff</span>
                       <span class='icon is-pulled-right'>
-                        <ion-icon name="chevron-down-outline"></ion-icon>
+                        <ion-icon :name="staffDirIcon"></ion-icon>
                       </span>
                   </a>
                   <div class="sub-menu">
@@ -58,11 +57,13 @@
                   </div>
                 </li>
 
-                <li>
-                  <div class="link">
-                    <a href="#">Student</a>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
-                  </div>
+                <li :class="studentShowC">
+                  <a class="link" href="#" @click="menuClick('student')">
+                    <span>Student</span>
+                    <span class='icon is-pulled-right'>
+                      <ion-icon :name="studentDirIcon"></ion-icon>
+                    </span>
+                  </a>
                   <div class="sub-menu">
                     <ul>
                       <li><a href="#">Liệt kê</a></li>
@@ -72,10 +73,12 @@
                 </li>
 
                 <li>
-                  <div class="link">
-                    <a href="#">Advisor</a>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
-                  </div>
+                  <a class="link" href="#">
+                    <span>Advisor</span>
+                    <span class='icon is-pulled-right'>
+                      <ion-icon :name="icon"></ion-icon>
+                    </span>
+                  </a>
                   <div class="sub-menu">
                     <ul>
                       <li><a href="#">Xem</a></li>
@@ -87,10 +90,12 @@
                 </li>
                 
                 <li>
-                  <div class="link">
-                    <a href="#">Semester</a>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
-                </div>
+                  <a class="link" href="#">
+                    <span>Semester</span>
+                    <span class='icon is-pulled-right'>
+                      <ion-icon :name="icon"></ion-icon>
+                    </span>
+                  </a>
                   <div class="sub-menu">
                     <ul>
                       <li><a href="#">Tạo mới</a></li>
@@ -102,10 +107,12 @@
                 </li>
 
                 <li>
-                  <div class="link">
-                    <a href="#">Project</a>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
-                  </div>
+                  <a class="link" href="#">
+                    <span>Project</span>
+                    <span class='icon is-pulled-right'>
+                      <ion-icon :name="icon"></ion-icon>
+                    </span>
+                  </a>
                   <div class="sub-menu">
                     <ul>
                       <li><a href="#">Lọc dự án</a></li>

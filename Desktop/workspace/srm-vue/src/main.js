@@ -7,17 +7,39 @@ new Vue({
   el: '#vue-app',
   data: {
     message: "hello",
-    staffShow: false,
+    menuState: {
+      staff: {
+        show: false
+      }, 
+      student: {
+        show: false
+      }
+    }
   },
   computed: {
+    studentShowC: function() {
+      return this.menuItemShow('student');
+    },
     staffShowC: function() {
-      return this.staffShow === true ? "menu-show":"";
+      return this.menuItemShow('staff');
+    },
+    staffDirIcon: function() {
+      console.log('icon')
+      return this.menuItemDirIcon('staff')
+    }, 
+    studentDirIcon: function() {
+      return this.menuItemDirIcon('student');
     }
   },
   methods: {
-    staffClick: function() {
-      console.log('StaffClick');
-      this.staffShow = !this.staffShow;
-    }
+    menuClick: function(menuItem) {
+      this.menuState[menuItem].show = !this.menuState[menuItem].show;
+    }, 
+    menuItemShow: function(menuItem) {
+      return this.menuState[menuItem].show === true ? "menu-show":"";
+    },
+    menuItemDirIcon: function(menuItem) {
+      return this.menuState[menuItem].show === true ? "chevron-down-outline":"chevron-forward-outline";
+    },
   }
 })
