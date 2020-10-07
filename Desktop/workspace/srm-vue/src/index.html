@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Research Management</title>
+  </head>
+  <body>
+    <div id="vue-app">
+      <nav class="navbar nav border">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            Home
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <!-- <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span> -->
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-link">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container.is-max-desktop">
+        <div class="columns border">
+          <div class="column is-2">
+            <aside class="menu">
+              <p class="menu-label">
+                Management
+              </p>
+              <ul class="menu-list">
+                <li :class="staffShowC">
+                  <a class="link" href="#" @click="staffClick()">
+                      <span>Staff</span>
+                      <span class='icon is-pulled-right'>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                      </span>
+                  </a>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">Liệt kê</a></li>
+                      <li><a href="#">Tìm kiếm</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="link">
+                    <a href="#">Student</a>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">Liệt kê</a></li>
+                      <li><a href="#">Tìm kiếm</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="link">
+                    <a href="#">Advisor</a>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">Xem</a></li>
+                      <li><a href="#">Tạo mới</a></li>
+                      <li><a href="#">Xác nhận</a></li>
+                      <li><a href="#">Xóa</a></li>
+                    </ul>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="link">
+                    <a href="#">Semester</a>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">Tạo mới</a></li>
+                      <li><a href="#">Liệt kê</a></li>
+                      <li><a href="#">Xóa</a></li>
+                      <li><a href="#">Sửa</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="link">
+                    <a href="#">Project</a>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">Lọc dự án</a></li>
+                      <li><a href="#">Liệt kê</a></li>
+                      <li><a href="#">Nhập điểm</a></li>
+                    </ul>
+                </li>
+            </aside>
+          </div>
+          <div class="column main">
+            lorem ipsum dolor sit amet, consectet
+            Lorem ipsum dolor sit amet, consectet.
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  </body>
+</html>

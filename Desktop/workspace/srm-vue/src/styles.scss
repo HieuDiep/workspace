@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import "~bulma/bulma";
+
+
+.border{
+    border: 1px solid black;
+}
+html {
+    overflow-y: auto;
+}
+// .link{
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .sub-menu {
+//     display:none;
+// }
+// // .menu-list li:hover .sub-menu{
+// //     display:block;
+// // }
+// .menu-list li.menu-show .sub-menu{
+//     display:block;
+// }
+
+// ion-icon{
+//     top: 9px;
+//     height: auto;
+//     margin: 0 15px;
+// }
